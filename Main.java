@@ -1,15 +1,36 @@
+import java.util.Scanner;
+
 class Main {
   public static void main(String[] args) {
+
+    Scanner scanner = new Scanner(System.in);
+
+    String name;
+    String surname;
+    int age;
+    boolean woman;
+
+//Tworzenie tablicy o nazwie "nameArray"
+    String[] nameArray = new String[8];
+
     System.out.println("Hello world!");
 
-    System.out.println("Przemysław Dudek");
-    System.out.println("Michał Żabski");
-    System.out.println("Patrycja Wałęsa");    
-    System.out.println("Kornela Sobonkiewicz");
-    System.out.println("Wiktoria Michałowicz-Kurowska");
-    System.out.println("Julia Brzostek");
-    System.out.println("Marysia Kwaśnica");
-    System.out.println("Mikołaj Jeznach");
+    for (int i = 0; i < 8; i++) {
+      System.out.println("Podaj imię i nazwisko osoby nr " + (i + 1) + ": ");
+      name = scanner.nextLine();
+      
+      //zapisuje wartość do tablicy
+      nameArray[i] = name;
+    }
+
+//wyświetlanie tablicy
+    for (int i = 0; i < 8; i++) {
+      System.out.println(nameArray[i]);
+    }
+    
+//Zadanie: zebrac wiek i wyświetlić. scanner.nextInt();
+
+
   }
   
 }
